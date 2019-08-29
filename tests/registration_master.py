@@ -129,7 +129,7 @@ def registration(url):
     close_triumf.click()
 
 
-                                        driver.quit()
+    driver.quit()
 
 
 def main():
