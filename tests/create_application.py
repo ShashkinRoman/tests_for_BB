@@ -74,10 +74,13 @@ def main():
     url = 'https://beautybox.ru/beauty-site'
     try:
         create_app(url)
+        print('--------------------------------------------------------------------')
         print('Test "create_application" completed')
-
+        print('--------------------------------------------------------------------')
+        return 2
     except:
         print('Test "CREATE_APPLICATION" FILED')
+        return 0
 
 
 

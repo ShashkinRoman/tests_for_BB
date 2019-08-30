@@ -44,8 +44,9 @@ def main():
     url = 'https://beautybox.ru/beauty-site'
     try:
         authorization(url)
+        print('--------------------------------------------------------------------')
         print('Test "authorization" completed')
-
+        print('--------------------------------------------------------------------')
     except:
         print('Test "AUTHORIZATION" FILED')
 

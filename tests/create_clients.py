@@ -116,8 +116,9 @@ def main():
     url = 'https://beautybox.ru/beauty-site'
     try:
         create_client(url)
+        print('--------------------------------------------------------------------')
         print('Test "create_client" completed')
-
+        print('--------------------------------------------------------------------')
     except:
         print('Test "CREATE_CLIENT" FILED')
 

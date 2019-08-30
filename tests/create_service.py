@@ -86,8 +86,9 @@ def main():
     url = 'https://beautybox.ru/beauty-site'
     try:
         create_service(url)
+        print('--------------------------------------------------------------------')
         print('Test "create_client" completed')
-
+        print('--------------------------------------------------------------------')
     except:
         print('Test "CREATE_CLIENT" FILED')
 

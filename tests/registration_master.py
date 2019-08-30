@@ -136,10 +136,13 @@ def main():
     url = 'https://beautybox.ru/beauty-site'
     try:
         registration(url)
+        print('--------------------------------------------------------------------')
         print('Test "registration" completed')
-
+        print('--------------------------------------------------------------------')
     except:
         print('Test "REGISTRATION" FILED')
+
+
 
 
 if __name__ == '__main__':
