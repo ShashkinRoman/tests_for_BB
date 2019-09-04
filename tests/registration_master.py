@@ -12,9 +12,6 @@ def registration(url):
     driver.get(url)
     # закрываем пуш
     sleep(1)
-    close_push = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]')))
-    close_push.click()
-    sleep(1)
     # кнопка получтьб бесплатно
     take_button = driver.find_element_by_xpath('/html/body/div[1]/div[2]/main/section[1]/div/div/div/a')
     take_button.click()

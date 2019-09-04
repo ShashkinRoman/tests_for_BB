@@ -15,14 +15,13 @@ from selenium.webdriver.support import expected_conditions as EC # available sin
 def create_app(url):
     path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
     driver = webdriver.Chrome(executable_path=path)
+    driver.set_window_size(1050, 1024)
     driver.get(url)
     sleep(1)
-    # закрываем пуш
-    close_push = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]')))
-    close_push.click()
     # кнопка получтьб бесплатно
     take_button = driver.find_element_by_xpath('/html/body/div[1]/div[2]/main/section[1]/div/div/div/a')
     take_button.click()
+    sleep(1)
     # ввод логина и пароля
     login = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'js-main-input-phone')))
     login.send_keys('1113333333')
@@ -33,9 +32,6 @@ def create_app(url):
     button_take_free = driver.find_element_by_id('js-login-account')
     button_take_free.click()
     sleep(3)
-    # закрываем пуш
-    close_push2 = driver.find_element_by_xpath('/html/body/div[1]')
-    close_push2.click()
     # нажимаем на раздел заявки
     applications = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,
                                                                                 '/html/body/div[1]/div/nav/ul/li[5]')))
@@ -59,9 +55,10 @@ def create_app(url):
     select_master_one = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,
                            '/html/body/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div/span[2]')))
     select_master_one.click()
-    select_open_window = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,
-        '/html/body/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div/span[3]/span/span[1]/input')))
-    select_open_window.send_keys(Keys.ENTER)
+    select_master_two = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,
+                                                                                        '/html/body/div[2]/div/div/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div/span[3]/span/span[1]/input')))
+    select_master_two.send_keys('Сергей123')
+    select_master_two.send_keys(Keys.ENTER)
     # сохраняем заявку
     sleep(1)
     save_application = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'btn__title')))

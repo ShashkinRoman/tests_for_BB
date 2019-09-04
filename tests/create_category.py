@@ -12,10 +12,6 @@ def create_category(url):
     path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
     driver = webdriver.Chrome(executable_path=path)
     driver.get(url)
-    # закрываем пуш
-    sleep(2)
-    close_push = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]')))
-    close_push.click()
     sleep(1)
     # кнопка получтьб бесплатно
     take_button = driver.find_element_by_xpath('/html/body/div[1]/div[2]/main/section[1]/div/div/div/a')
@@ -31,9 +27,6 @@ def create_category(url):
     button_take_free = driver.find_element_by_id('js-login-account')
     button_take_free.click()
     sleep(2)
-    # закрываем пуш
-    close_push2 = driver.find_element_by_xpath('/html/body/div[1]')
-    close_push2.click()
     # переходим в раздел услуги
     find_button_service = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH,
@@ -59,12 +52,12 @@ def create_category(url):
     # title category and save
     find_title = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH,
-                                        '/html/body/div[2]/div[1]/div[2]/div/div[1]/input')))
+                                        '/html/body/div[2]/div[3]/div[2]/div/div[1]/input[1]')))
     find_title.send_keys('test category ' + str(randint(1000000, 9999999)))
     sleep(1)
     save_category = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH,
-                                        '/html/body/div[2]/div[1]/div[3]/button')))
+                                        '/html/body/div[2]/div[3]/div[3]/button')))
     save_category.click()
     sleep(2)
     # delete yorself category
@@ -95,10 +88,10 @@ def main():
     try:
         create_category(url)
         print('--------------------------------------------------------------------')
-        print('Test "create_client" completed')
+        print('Test "create_cantegory" completed')
         print('--------------------------------------------------------------------')
     except:
-        print('Test "CREATE_CLIENT" FILED')
+        print('Test "CREATE_CATEGORY" FILED')
 
 
 if __name__ == '__main__':

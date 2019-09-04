@@ -10,11 +10,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 def create_master(url):
     path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
     driver = webdriver.Chrome(executable_path=path)
+    driver.set_window_size(1050, 1024)
     driver.get(url)
     # закрываем пуш
-    sleep(1)
-    close_push = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[1]')))
-    close_push.click()
     sleep(1)
     # кнопка получтьб бесплатно
     take_button = driver.find_element_by_xpath('/html/body/div[1]/div[2]/main/section[1]/div/div/div/a')
@@ -30,9 +28,6 @@ def create_master(url):
     button_take_free = driver.find_element_by_id('js-login-account')
     button_take_free.click()
     sleep(2)
-    # закрываем пуш
-    close_push2 = driver.find_element_by_xpath('/html/body/div[1]')
-    close_push2.click()
     # select "about salon" and click employees
     sleep(2)
     find_button_service = WebDriverWait(driver, 10).until(
@@ -48,7 +43,7 @@ def create_master(url):
     # find and click button "added employees
     find_button_add_employeed = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH,
-                                        '/html/body/div[1]/div/main/div[2]/div/div[1]/div[2]/div')))
+                                        '/html/body/div[1]/div/main/div[2]/div/div[1]/div[2]/button')))
     find_button_add_employeed.click()
     sleep(2)
     # complete info about employees and save
@@ -84,20 +79,21 @@ def create_master(url):
     find_checkbox.click()
     sleep(2)
     # delete new employees
-    find_new_employees= WebDriverWait(driver, 10).until(
+    find_new_employees = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME,
                                         'jsCrmEmployeesAssociateItem ')))
     find_new_employees.click()
-
-    find_button_delete = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH,
-                                        '/html/body/div[2]/div/div/div[3]/div/div/button[1]')))
-    find_button_delete.click()
-
-    find_button_delete2 = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH,
-                                        '//*[@id="delete"]/div/div/div[2]/button[1]')))
-    find_button_delete2.click()
+    # Кликает в середину эелемена двух кнопок на всплывающем в модальном окне.
+    # Сделал потому что с кликом по кнопке были проблемы, потом поправить можно
+    # find_button_delete = WebDriverWait(driver, 10).until(
+    #     EC.presence_of_element_located((By.XPATH,
+    #                                     '//*[@id="delete"]/div/div/div[2]')))
+    # find_button_delete.click()
+    # sleep(1)
+    # find_button_delete2 = WebDriverWait(driver, 10).until(
+    #     EC.presence_of_element_located((By.XPATH,
+    #                                     '//*[@id="delete"]/div/div/div[2]/button[1]')))
+    # find_button_delete2.click()
     sleep(2)
     driver.quit()
 
