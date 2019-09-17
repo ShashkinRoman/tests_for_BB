@@ -4,7 +4,6 @@
 окна выбора мастеров и сохраняет заявку на 06:00 по времени.
 '''
 from selenium.webdriver.common.keys import Keys
-
 from config import configuration
 from time import sleep
 from config.decorators import try_execute
