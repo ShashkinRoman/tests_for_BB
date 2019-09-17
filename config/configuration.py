@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC
 
+#todo загрузить webdriver для контейнера
+#todo
 
 class Config:
     def __init__(self):
@@ -26,7 +28,6 @@ class Func(Config):
     def w_id(self, *args):
         return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, *args)))
 
-
     def authorization(self):
         config = Config()
         url = config.url + config.urlmod
@@ -43,3 +44,5 @@ class Func(Config):
         # нажимаем получить бесплатно
         button_take_free = self.w_id('js-login-account')
         button_take_free.click()
+
+
