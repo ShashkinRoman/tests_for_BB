@@ -4,6 +4,7 @@ from config.decorators import try_execute
 func = configuration.Func()
 
 
+# декоратор, который прогоняет тест трижды и если были ошибки, выводит текст
 @try_execute
 def authorization():
 
