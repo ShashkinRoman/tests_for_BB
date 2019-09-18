@@ -1,6 +1,4 @@
 from time import sleep
-from selenium import webdriver
-from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
@@ -8,10 +6,11 @@ from random import randint
 from config import configuration
 from config.decorators import try_execute
 
+func = configuration.Func()
+
 
 @try_execute
 def create_category():
-    func = configuration.Func()
     func.authorization()
     func.driver.set_window_size(1050, 1024)
     sleep(1)
@@ -49,9 +48,7 @@ def create_category():
                                             'jsCrmCategoriesDeleteItemLink')))
     delete_category.click()
     sleep(2)
-    accept_delete = WebDriverWait(func.driver, 10).until(
-        EC.presence_of_element_located((By.XPATH,
-                                        '//*[@id="delete"]/div/div/div[2]/button[1]')))
+    accept_delete = func.w_xpath('//*[@id="delete"]/div/div/div[2]/button[1]')
     accept_delete.click()
 
     remove_at_home = func.w_xpath('/html/body/div[1]/div/nav/ul/li[1]/a')
@@ -60,6 +57,7 @@ def create_category():
 
 def main():
     create_category()
+    func.driver.quit()
 
 
 if __name__ == '__main__':

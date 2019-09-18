@@ -8,9 +8,11 @@ from config import configuration
 from time import sleep
 from config.decorators import try_execute
 
+func = configuration.Func()
+
 @try_execute
 def create_app():
-    func = configuration.Func()
+
     func.authorization()
     func.driver.set_window_size(1050, 1024)
     # нажимаем на раздел заявки
@@ -42,7 +44,7 @@ def create_app():
 
 def main():
     create_app()
-
+    func.driver.quit()
 
 if __name__ == '__main__':
     main()

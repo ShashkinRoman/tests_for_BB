@@ -14,6 +14,7 @@ def authorization():
 
 def main():
     authorization()
+    func.driver.quit()
 
 if __name__ == '__main__':
     main()
