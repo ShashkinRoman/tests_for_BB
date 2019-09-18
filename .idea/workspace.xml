@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6809357-e17d-441f-9a5a-3dd6f772dd78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configuration.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +36,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/create_category.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+                <state relative-caret-position="595">
+                  <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
                   </folding>
@@ -45,11 +45,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/decorators.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="357">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -66,6 +66,18 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/configuration.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                  <folding>
+                    <element signature="e#0#6#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -74,7 +86,7 @@
             <entry file="file://$PROJECT_DIR$/tests/create_service.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+                  <caret column="18" selection-start-column="18" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -82,8 +94,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/authorization.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="20" />
+                <state relative-caret-position="340">
+                  <caret line="20" selection-end-line="20" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -132,14 +144,14 @@
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/config/config.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.pyx" />
-        <option value="$PROJECT_DIR$/config/configuration.py" />
         <option value="$PROJECT_DIR$/tests/create_master.py" />
         <option value="$PROJECT_DIR$/tests/create_application.py" />
         <option value="$PROJECT_DIR$/tests/create_category.py" />
         <option value="$PROJECT_DIR$/tests/create_clients.py" />
-        <option value="$PROJECT_DIR$/tests/authorization.py" />
         <option value="$PROJECT_DIR$/tests/create_service.py" />
         <option value="$PROJECT_DIR$/config/decorators.py" />
+        <option value="$PROJECT_DIR$/config/configuration.py" />
+        <option value="$PROJECT_DIR$/tests/authorization.py" />
       </list>
     </option>
   </component>
@@ -278,12 +290,12 @@
       <workItem from="1568615156512" duration="17982000" />
       <workItem from="1568697944594" duration="13024000" />
       <workItem from="1568712353295" duration="13067000" />
-      <workItem from="1568784720023" duration="11391000" />
+      <workItem from="1568784720023" duration="13140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141177000" />
+    <option name="totallyTimeSpent" value="142926000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -296,7 +308,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08985667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -574,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/create_master.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -618,20 +622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/create_category.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/create_service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -645,17 +639,37 @@
     <entry file="file://$PROJECT_DIR$/config/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/create_category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/authorization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

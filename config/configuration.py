@@ -1,20 +1,26 @@
+import os
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC
 
-#todo загрузить webdriver для контейнера
-#todo
+
+# class Config:
+#     def __init__(self):
+#         self.url = 'https://beautybox.ru/'
+#         self.urlmod = 'beauty-site'
+#         self.login = '1113333333'
+#         self.password = '123456'
+#         self.path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
 
 class Config:
     def __init__(self):
-        self.url = 'https://beautybox.ru/'
-        self.urlmod = 'beauty-site'
-        self.login = '1113333333'
-        self.password = '123456'
-        self.path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
-
+        self.url = os.environ['url']
+        self.urlmod = os.environ['urlmod']
+        self.login = os.environ['login']
+        self.password = os.environ['password']
+        self.path = os.environ['path']
 
 class Func(Config):
     # config = Config()
