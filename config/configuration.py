@@ -6,14 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC
 
 
-# class Config:
-#     def __init__(self):
-#         self.url = 'https://beautybox.ru/'
-#         self.urlmod = 'beauty-site'
-#         self.login = '1113333333'
-#         self.password = '123456'
-#         self.path = 'C:/Users/Обучение/Google Диск/Обучение python/2gisparser/chromedriver_32/chromedriver.exe'
-
 class Config:
     def __init__(self):
         self.url = os.environ['url']
@@ -23,8 +15,6 @@ class Config:
         self.path = os.environ['path']
 
 class Func(Config):
-    # config = Config()
-    # driver = webdriver.Chrome(executable_path=config.path)
     def __init__(self):
         config = Config()
         # Создаем подключение
