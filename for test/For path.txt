@@ -1,0 +1,5 @@
+setx login "1113333333"
+setx path "D:\Python project\Beautybox_tests\chromedriver\chromedriver.exe"
+setx password "123456"
+setx url_mode "beauty-site"
+setx url "https://beautybox.ru/"
