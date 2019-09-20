@@ -9,7 +9,7 @@ func = configuration.Func()
 def authorization():
 
     func.authorization()
-    # нажимаем на раздел инстаграм, чтобы проверить, что страница кабинета прогрузилась
+    # нажимаем на раздел инстаграм, чтобы проQDверить, что страница кабинета прогрузилась
     instagram = func.w_xpath('/html/body/div[1]/div/nav/ul/li[8]')
     instagram.click()
 

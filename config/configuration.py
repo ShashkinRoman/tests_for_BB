@@ -1,33 +1,25 @@
 import os
-import environ
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC
-
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False))
-
-environ.Env.read_env()
-
+from selenium.webdriver.chrome.options import Options
 
 class Config(object):
-    def __init__(self):
-        self.url = environ.Env('URL')
-        self.url_mod = environ.Env('URL_MODE')
-        self.login = environ.Env('LOGIN')
-        self.password = environ.Env('PASSWORD')
-        self.webdr = environ.Env('PATH')
-
+    url = os.environ.get('url')
+    url_mod = os.environ.get('url_mode')
+    login = os.environ.get('login')
+    password = os.environ.get('password')
+    webdr = os.environ.get('webdr')
 
 class Func(Config):
     def __init__(self):
         config = Config()
-        # self.webdr = 'D:\Python project\Beautybox_tests\chromedriver\chromedriver'
+        options = Options()
+        options.add_argument('--headless')
         # Создаем подключение
-        self.driver = webdriver.Chrome(executable_path=config.webdr)
+        self.driver = webdriver.Chrome(executable_path=config.webdr, chrome_options=options)
 
     def w_xpath(self, *args):
         return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, *args)))
@@ -52,5 +44,3 @@ class Func(Config):
         # нажимаем получить бесплатно
         button_take_free = self.w_id('js-login-account')
         button_take_free.click()
-
-
